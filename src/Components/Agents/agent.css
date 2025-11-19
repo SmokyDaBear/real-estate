@@ -1,0 +1,147 @@
+.agent-card {
+  cursor: pointer;
+  display: flex;
+  border: 1px solid var(--color-border);
+  background-color: var(--bg-light);
+  border-radius: 12px;
+  padding: 16px;
+  margin: 16px;
+  width: 100%;
+  box-shadow: var(--shadow-sm);
+  transition: transform 0.1s ease, box-shadow 0.2s ease;
+  text-align: left;
+  width: 95%;
+  max-width: 600px;
+  margin: 12px auto;
+}
+.agent-card:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-md);
+}
+.agent-photo {
+  display: inline-block;
+  margin: 6px;
+  width: 160px;
+  height: 160px;
+  overflow: hidden;
+  flex-shrink: 0;
+  position: relative;
+  border-radius: 10px;
+  background-color: var(--bg);
+  border: 1px solid var(--color-border);
+}
+.agent-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.agent-card-info {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 16px;
+}
+.agent-card-info h3 {
+  text-align: center;
+  font-size: 1.5rem;
+  color: var(--accent);
+}
+/* Agent Bio Page Styles */
+.agent-bio-page {
+  margin: 24px auto;
+  padding: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background-color: var(--bg-light);
+  box-shadow: var(--shadow-sm);
+  max-width: 1200px;
+}
+.agent-bio-photo {
+  width: 200px;
+  height: 200px;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: 16px auto;
+  border: 1px solid var(--color-border);
+}
+.agent-bio-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.agent-bio-info h2 {
+  font-size: 2rem;
+  margin-bottom: 8px;
+  color: var(--accent);
+}
+.agent-bio-info p {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: var(--text);
+}
+.agent-contact-info {
+  margin-top: 16px;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  padding: 16px;
+  background-color: var(--bg);
+  width: max-content;
+  max-width: 95%;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 2rem;
+}
+.agent-contact-info a {
+  margin: 4px 0;
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  padding: 8px 12px;
+  display: block;
+  width: max-content;
+  background-color: var(--bg-light);
+  color: var(--text);
+  text-decoration: none;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+.agent-contact-info a:hover {
+  background-color: var(--bg);
+  border-color: var(--color-border);
+  box-shadow: var(--shadow-sm);
+}
+.contact-agent-button {
+  margin-top: 16px;
+  background-color: var(--primary);
+  color: var(--text-dark);
+  border: 1px solid var(--primary);
+  padding: 0.75rem 1.25rem;
+  border-radius: 10px;
+  font-size: 1rem;
+  transition: background-color 0.2s ease, box-shadow 0.2s ease,
+    border-color 0.2s ease;
+}
+.contact-agent-button:hover {
+  background-color: var(--primary-dark);
+  border-color: var(--primary-dark);
+  cursor: pointer;
+  box-shadow: var(--shadow-md);
+}
+.agent-property-listings {
+  margin-top: 32px;
+  background: var(--bg-dark);
+  padding: 16px 6px;
+  border-radius: 12px;
+}
+.agent-property-listings h2 {
+  text-align: center;
+  margin-bottom: 16px;
+  color: var(--text-dark);
+}
+.agent-full-bio {
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--text);
+  max-width: 600px;
+  margin: 16px auto;
+}
