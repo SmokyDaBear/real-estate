@@ -76,8 +76,8 @@ export function ContactFormFull() {
       </div>
       <div className="form-info">
         <p>
-          Our agents will get back to you within 24-48 hours. We look forward to
-          assisting you!
+          Our agents will get back to you within 1-3 business days. We look
+          forward to assisting you!
         </p>
       </div>
       <button type="submit">Send</button>

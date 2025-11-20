@@ -1,5 +1,5 @@
 import { propertyListings } from "../data/property-listings";
-import { navigateToListing } from "../utils/navigation";
+import { navigateTo, navigateToListing } from "../utils/navigation";
 export function HomePage() {
   return (
     <>
@@ -29,6 +29,14 @@ export function HomePage() {
       <section>
         <h2>Looking to Sell your Home?</h2>
         <p>Contact an agent now to get started.</p>
+        <button
+          className="call-to-action-btn"
+          onClick={() => navigateTo("contact")}
+        >
+          Contact an Agent
+        </button>
+        <br />
+        <br />
       </section>
     </>
   );

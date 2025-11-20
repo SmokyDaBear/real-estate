@@ -47,6 +47,7 @@
   height: 100%;
   object-fit: cover;
   transition: transform 0.3s ease;
+  aspect-ratio: 1 / 1;
 }
 .listing-card .listing-info {
   flex: 1;
@@ -69,6 +70,38 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: center;
+
+  /* No Results Styling */
+  .no-results {
+    text-align: center;
+    padding: 3rem 1rem;
+    background-color: var(--bg);
+    border-radius: 12px;
+    margin: 2rem auto;
+    max-width: 500px;
+    box-shadow: var(--shadow-sm);
+  }
+
+  .no-results p {
+    font-size: 1.125rem;
+    color: var(--text);
+    margin-bottom: 1.5rem;
+  }
+
+  .no-results button {
+    padding: 10px 24px;
+    font-size: 1rem;
+    background-color: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+  }
+
+  .no-results button:hover {
+    background-color: var(--primary-dark);
+  }
   align-items: center;
   gap: 12px;
 }
@@ -81,7 +114,6 @@
   background-color: var(--bg-light);
 }
 .status {
-  position: absolute;
   z-index: 5;
   bottom: 4px;
   right: 4px;
@@ -94,6 +126,9 @@
   padding: 4px 8px;
   border-radius: 6px;
   background-color: var(--bg-light);
+}
+.listing-card .status {
+  position: absolute;
 }
 .status.available {
   background-color: var(--success);
@@ -128,6 +163,7 @@
   object-fit: cover;
   border-radius: 8px;
   box-shadow: var(--shadow-sm);
+  aspect-ratio: 4 / 3;
 }
 .nav-button {
   background: transparent;

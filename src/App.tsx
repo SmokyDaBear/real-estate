@@ -12,7 +12,8 @@ import type { TPage } from "./types";
 const parseHash = (): { page: TPage } => {
   const raw = window.location.hash.replace(/^#\/?/, "");
   const [first] = raw.split("/");
-  const page = (first || "home") as TPage;
+  const [pageToken] = first.split("?"); // tolerate legacy hash with ?params
+  const page = (pageToken || "home") as TPage;
   if (!["home", "listings", "contact", "agents"].includes(page)) {
     return { page: "404" };
   }
@@ -21,7 +22,6 @@ const parseHash = (): { page: TPage } => {
 
 function App() {
   const [currentPage, setCurrentPage] = useState<TPage>(parseHash().page);
-
   useEffect(() => {
     const onHashChange = () => {
       const { page } = parseHash();

@@ -8,6 +8,7 @@ export type TPropertyListing = {
   bedrooms: number;
   bathrooms: number;
   areaSqFt: number;
+  hasPool?: boolean;
   images: string[];
   listedDate: Date;
   listingStatus: "available" | "pending" | "sold";

@@ -3,12 +3,16 @@ import { useState } from "react";
 import { AgentCard } from "../Agents/AgentCard";
 import { agents } from "../../data/agents";
 import { navigateToAgent } from "../../utils/navigation";
+import { ListingInquiry } from "../Forms/ListingInquiry";
+import { LazyImage } from "../Image/LazyImage";
+import { getSolidPlaceholder } from "../../utils/imagePlaceholder";
 
 type TListingFullProps = TPropertyListing & {
   backToListings: () => void;
 };
 
 export function ListingFull({
+  id,
   title,
   agentId,
   description,
@@ -47,11 +51,18 @@ export function ListingFull({
             />
           </div>
         )}
+        <ListingInquiry listingId={id} />
       </div>
 
       <div className="full-listing-images-container">
         <div className="primary-image-container">
-          <img src={images[currentImageIndex]} alt={title} />
+          <img
+            src={images[currentImageIndex]}
+            alt={title}
+            loading="lazy"
+            width="800"
+            height="600"
+          />
         </div>
         <button
           onClick={() =>
@@ -82,9 +93,12 @@ export function ListingFull({
                 (index === currentImageIndex ? " " : " faded ")
               }
             >
-              <img
+              <LazyImage
                 src={imgUrl}
                 alt={`${title} thumbnail ${index + 1}`}
+                width={140}
+                height={140}
+                placeholder={getSolidPlaceholder("#d1d5db")}
                 onClick={() => setCurrentImageIndex(index)}
               />
             </div>

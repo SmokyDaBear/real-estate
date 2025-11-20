@@ -1,4 +1,6 @@
 import type { TPropertyListing } from "../../types";
+import { LazyImage } from "../Image/LazyImage";
+import { getSolidPlaceholder } from "../../utils/imagePlaceholder";
 import "./listing.css";
 
 type TListingCardProps = TPropertyListing & {
@@ -20,7 +22,13 @@ export function ListingCard({
   return (
     <div className="listing-card" onClick={() => setCurrentListing(id)}>
       <div className="listing-thumbnail">
-        <img src={images[0]} alt={title} />
+        <LazyImage
+          src={images[0]}
+          alt={title}
+          width={140}
+          height={140}
+          placeholder={getSolidPlaceholder("#d1d5db")}
+        />
         <span className={`status ${listingStatus}`}>{listingStatus}</span>
       </div>
       <div className="listing-info">
